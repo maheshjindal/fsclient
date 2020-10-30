@@ -1,6 +1,6 @@
 package com.maheshjindal.scala.fsclient.utils
 
 object FSClientEnvProperties {
-  val SEPERATOR = System.getProperty("file.separator")
+  val SEPARATOR: String = System.getProperty("file.separator")
   val SHELL_TOKEN = "\uD83D\uDC7B"
 }

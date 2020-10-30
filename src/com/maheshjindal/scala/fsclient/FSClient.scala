@@ -1,6 +1,5 @@
 package com.maheshjindal.scala.fsclient
 
-import java.util.concurrent.ThreadPoolExecutor
 
 import com.maheshjindal.scala.fsclient.commands.Command
 import com.maheshjindal.scala.fsclient.statemanager.State

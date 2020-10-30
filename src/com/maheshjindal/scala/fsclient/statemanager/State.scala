@@ -15,6 +15,8 @@ class State(val root: Directory, val workingDir: Directory, val prevCmdOutput: S
 
   def setMessage(message: String): State = State(root, workingDir, message)
 
+  def path = ???
+
 }
 
 object State {

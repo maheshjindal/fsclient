@@ -7,5 +7,8 @@ trait Command {
 }
 
 object Command {
-  def from(inputPath:String) = new CommandNotFound
+  def from(inputPath:String):Command = {
+    val command = CommandParser.parse(inputPath)
+    command
+  }
 }
