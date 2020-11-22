@@ -1,6 +1,5 @@
-package com.maheshjindal.scala.fsclient
+package com.maheshjindal.scala.fsclient.commands
 
-import com.maheshjindal.scala.fsclient.commands.Command
 import com.maheshjindal.scala.fsclient.statemanager.State
 import com.maheshjindal.scala.fsclient.storage.{DirReference, Directory}
 
@@ -19,9 +18,9 @@ abstract class CreateObjectEntry(objectName: String, recursive:Boolean=false) ex
     }
 
     _doCreateObjectEntry(state,objectName)
-
-    //    state
   }
+
+  //TODO: Supporting --recursive option
 
   def _validateDirectoryName(): Unit = {
     if (!recursive && objectName.contains(Directory.SEPARATOR)) {
@@ -33,8 +32,7 @@ abstract class CreateObjectEntry(objectName: String, recursive:Boolean=false) ex
     }
   }
 
-  def _doCreateObjectEntry(state:State, name: String) = {
-
+  def _doCreateObjectEntry(state:State, name: String):State = {
     def updateDirStructure(currDir: Directory, path: List[String], newEntry: DirReference):Directory = {
       if(path.isEmpty)currDir.addEntry(newEntry)
       else{

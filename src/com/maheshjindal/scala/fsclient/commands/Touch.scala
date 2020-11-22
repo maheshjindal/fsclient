@@ -1,5 +1,4 @@
 package com.maheshjindal.scala.fsclient.commands
-import com.maheshjindal.scala.fsclient.CreateObjectEntry
 import com.maheshjindal.scala.fsclient.statemanager.State
 import com.maheshjindal.scala.fsclient.storage.DirReference
 import com.maheshjindal.scala.fsclient.fs.File
